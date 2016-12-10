@@ -1,1 +1,122 @@
 aka Make Coding Great Again (sorry but only name which suits file!)
+
+=======================================
+BEM — Block Element Modifier
+=======================================
+No nesting,and none html element essential!
+
+BEM entities =
+	Blocks
+	- blocks on the page e.g. head or logo, or searh, menu etc
+	- build independantly so can be moved around the page
+	- multiple of the same blocks
+
+	Element __
+	- only used inside the block
+	- e.g. menu stuff is only done in a menu block
+	- no elements in elements
+
+	Modifier -
+	- simular to attributes, to modify things
+	- e.g. active, hidden, spinning
+	- can be added to blocks or elements
+
+	
+example of how to:
+<header class="header">
+    <img class="logo">
+    <form class="search-form">
+        <input type="input">
+        <button type="button"></button>
+    </form>
+    <ul class="lang-switcher">
+        <li class="lang-switcher__item">
+            <a class="lang-switcher__link" href="url">en</a>
+        </li>
+        <li class="lang-switcher__item">
+            <a class="lang-switcher__link" href="url">ru</a>
+        </li>
+    </ul>
+</header>
+
+
+sooooo logically makes:
+header
+    ├──logo
+    └──search-form
+        ├──input
+        └──button
+    └──lang-switcher
+        └──lang-switcher__item
+            └──lang-switcher__link
+        └──lang-switcher__item
+            └──lang-switcher__link
+
+
+=======================================
+Flexbox
+=======================================
+- direction agnostic, rather than regular layouts (vertically or horizontally)
+
+- Parent:
+	display: flex 	| so know's its a flex container and childer are as well
+	flex-direction	| which way			| row | row-reverse | column | column-reverse;
+	flex-wrap		| shall it wrap		| nowrap | wrap | wrap-reverse;
+	flex-flow		| takes the 2 above with a || separating
+	justify-content	| positioning horizontally	| flex-start | flex-end | center | space-between | space-around; :)
+	align-items		| positioning vertically	| flex-start | flex-end | center | baseline | stretch; :)
+	align-content	| simular to justify but multi line
+	
+- Children:
+	 order			| specify which order stuff displays :)
+	 flex-grow		| if all the same, all grow equally, if 2 double
+	 flex-shrink	| allowscontent to shirnk if need be (same as responsive images?)
+	 flex			| short for both above
+	 align-self		| specify something to be differently aligned
+
+
+
+=======================================
+CSS3
+=======================================
+border-radius		- curvey corners
+border-image		- set an image for borders
+background			- can have multiple background images, comma separated
+background-size		- specify the size, or contain (width max, so height not max), cover (full width), can be multiple
+background-origin	- where to start the background padding-box (default), border-box or content-box :)
+background-clip		- where to start the background padding-box (default), border-box or content-box :)
+background-color	- can no add opacity and graident (multi) and repeatable, radial
+text-shadow			- cool effects and blurs etc
+box-shadow			- cool effects and blurs etc
+text-overflow		- clip or ellipsis (extra becomes ...)
+word-wrap			- if word is too long, breaks to another line regardless
+word-break			- keep-all words together, or break-all
+transform			- rotate, scale, skewX, skewY, matrix, rotateY, rotateZ
+backface-visibility	- hide when backwards
+transition			- css element which will change then time (width 2s;) comma separate many
+transition-timing-function - preset anotimations
+transition-delay	- wait befoe something
+transition-duration	- how long to take to complete
+animation			- uses keyframes cooool :)
+images				- photo editing (blur, brightness, invert, shadow etc)
+column-count		- turns space into newpaper stle
+column-span			- like excel merge cells, but across collumns, e.g. headline or hero image
+resize				- resize a box as you wish (vertically, horizontally or both)
+box-sizing			- no longer need to make box smaller to include border apparently
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
